@@ -18,6 +18,11 @@ Here's the copyright passage from the linker script:
 **  with other tools than Atollic TrueSTUDIO(R) is not permitted.
 ```
 
+## Note on OpenOCD
+OpenOCD supports the Nucleo F303 (and others?) only from version 0.9.0. Most Linux distributions have (at the time of writing)
+only older versions in the repository.
+
 # References
 1. [http://regalis.com.pl/en/arm-cortex-stm32-gnulinux](http://regalis.com.pl/en/arm-cortex-stm32-gnulinux/)
+* [STM Cube](http://www.st.com/web/catalog/tools/FM147/CL1794/SC961/SS1743/LN1897/PF260613)
 
