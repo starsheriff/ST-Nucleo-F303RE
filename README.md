@@ -4,7 +4,19 @@ Many thanks to [Patryk Jaworski](http://regalis.com.pl/en/arm-cortex-stm32-gnuli
 he published a very nice tutorial explaining how to use the STM Nucleo boards under Linux.
 The basic project template follows his instructions quite closely and I will repeat a lot from his blog.
 
+## Linker Script
+The linker script `STM32F303XE_FLASH.ld`, which is shipped along with the STM32Cube package has a quite nasty copyright.
+(I think) it is not allowed to publish it on github, so you have to download the STM32Cube package yourselv and extract the file.
+Although, strictly speaking you wouldn't be allowed to use it with a GNU compiler...
 
+Here's the copyright passage from the linker script:
+```
+**  (c)Copyright Atollic AB.
+**  You may use this file as-is or modify it according to the needs of your
+**  project. This file may only be built (assembled or compiled and linked)
+**  using the Atollic TrueSTUDIO(R) product. The use of this file together
+**  with other tools than Atollic TrueSTUDIO(R) is not permitted.
+```
 
 # References
 1. [http://regalis.com.pl/en/arm-cortex-stm32-gnulinux](http://regalis.com.pl/en/arm-cortex-stm32-gnulinux/)
