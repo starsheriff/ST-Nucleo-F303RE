@@ -23,6 +23,7 @@ OpenOCD supports the Nucleo F303 (and others?) only from version 0.9.0. Most Lin
 only older versions in the repository.
 
 # References
-1. [http://regalis.com.pl/en/arm-cortex-stm32-gnulinux](http://regalis.com.pl/en/arm-cortex-stm32-gnulinux/)
+1. [STM32F303RE on STM.com](http://www.st.com/web/en/catalog/mmc/FM141/SC1169/SS1576/LN1531/PF259246)
+* [http://regalis.com.pl/en/arm-cortex-stm32-gnulinux](http://regalis.com.pl/en/arm-cortex-stm32-gnulinux/)
 * [STM Cube](http://www.st.com/web/catalog/tools/FM147/CL1794/SC961/SS1743/LN1897/PF260613)
 
