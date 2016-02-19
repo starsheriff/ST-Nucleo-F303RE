@@ -1,11 +1,16 @@
+#include "stm32f303xe.h"
 
+#define LED_2_PIN 5
 
 
 int main(void)
 {
-  HAL_Init();
-  BSP_LED_Init(LED2);
-  SystemClock_Config();
+  // Enable GPIO clock on port A
+  // RCC is of type RCC_TypeDef and defined and initiated in 
+  // stm32f303xe.h
+  RCC->AHB1ENR |= RCC_AHBENR_GPIOAEN
+
+  GPIOx->BSRR = (uint32_t)GPIO_Pin;
 
   while(1)
   {
