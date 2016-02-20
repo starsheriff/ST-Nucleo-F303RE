@@ -1,8 +1,27 @@
 CC=arm-none-eabi-gcc
-CFLAGS=-Wall -mlittle-endian -mthumb
+CFLAGS=-mcpu=cortex-m4 -Wall -mlittle-endian -mthumb
+LDFLAGS=
+OBJECTS=main.o startup_stm32f303xe.o system_stm32f3xx.o
 
-main:
-	$(CC) $(CFLAGS) -mcpu=cortex-m4 -I../common -DSTM32F303xE -Os -c main.c -o main.o
+all: $(OBJECTS) main.elf main.hex
+
+main.o:
+	$(CC) $(CFLAGS) -I../common -DSTM32F303xE -Os -c main.c -o main.o
+	
+startup_stm32f303xe.o:
+	$(CC) $(CFLAGS) -I../common -DSTM32F303xE -Os -c ../common/startup_stm32f303xe.s -o startup_stm32f303xe.o
+	
+system_stm32f3xx.o:
+	$(CC) $(CFLAGS) -I../common -DSTM32F303xE -Os -c ../common/system_stm32f3xx.c -o system_stm32f3xx.o
+
+main.elf:
+	$(CC) -mcpu=cortex-m4 -mlittle-endian -mthumb -DSTM32F401xE -TSTM32F303RE_FLASH.ld -Wl,--gc-sections $(OBJECTS) -o main.elf
+
+main.hex:
+	arm-none-eabi-objcopy -Oihex main.elf main.hex
+	
+flash:
+	openocd -f openocd.cfg
 
 clean:
-	rm *.o
+	rm *.o *.elf *.hex
