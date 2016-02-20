@@ -1,4 +1,4 @@
-#include "stm32f303xe.h"
+#include <stm32f303xe.h>
 
 #define LED_2_PIN 5
 
@@ -11,6 +11,7 @@ int main(void)
      stm32f303xe.h */
   RCC->AHBENR |= RCC_AHBENR_GPIOAEN;
   
+  /* Configure PIN5 as output */
   /* All lines have the same effect, choose one */
   GPIOA->MODER |= GPIO_MODER_MODER5_0;
   //GPIOA->MODER |= (1 << (5 << 1));
@@ -38,7 +39,7 @@ int main(void)
     //GPIOA->BSRR = (1 << (LED_2_PIN + 16));
     //GPIOA->BRR |= (1 << LED_2_PIN);
     //GPIOA->ODR = 0x0000; // not recommended
-    delay(50000);
+    delay(500000);
   }
   
 }
