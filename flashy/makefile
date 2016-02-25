@@ -15,7 +15,7 @@ system_stm32f3xx.o:
 	$(CC) $(CFLAGS) -I../common -DSTM32F303xE -Os -c ../common/system_stm32f3xx.c -o system_stm32f3xx.o
 
 main.elf:
-	$(CC) $(LDFLAGS) -T../common/STM32F303XE_FLASH.ld -Wl,--gc-sections $(OBJECTS) -o main.elf
+	$(CC) $(LDFLAGS) -T../common/STM32F303XE_FLASH_minimal.ld -Wl,--gc-sections $(OBJECTS) -o main.elf
 
 main.hex:
 	arm-none-eabi-objcopy -Oihex main.elf main.hex
