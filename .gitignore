@@ -1,5 +1,6 @@
 *.o
 *.elf
 *.hex
+*.geany
 STM32F303XE_FLASH.ld
 STM32F303RE_FLASH.ld
