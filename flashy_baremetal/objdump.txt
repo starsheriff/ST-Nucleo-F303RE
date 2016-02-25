@@ -4,88 +4,70 @@ main.elf:     file format elf32-littlearm
 
 Disassembly of section .text:
 
-08000000 <_reset_handler-0x50>:
+08000000 <_reset_handler-0x8>:
  8000000:	2000ffff 	strdcs	pc, [r0], -pc	; <UNPREDICTABLE>
- 8000004:	08000051 	stmdaeq	r0, {r0, r4, r6}
- 8000008:	08000057 	stmdaeq	r0, {r0, r1, r2, r4, r6}
- 800000c:	08000057 	stmdaeq	r0, {r0, r1, r2, r4, r6}
- 8000010:	08000057 	stmdaeq	r0, {r0, r1, r2, r4, r6}
- 8000014:	08000057 	stmdaeq	r0, {r0, r1, r2, r4, r6}
- 8000018:	08000057 	stmdaeq	r0, {r0, r1, r2, r4, r6}
- 800001c:	08000057 	stmdaeq	r0, {r0, r1, r2, r4, r6}
- 8000020:	08000057 	stmdaeq	r0, {r0, r1, r2, r4, r6}
- 8000024:	08000057 	stmdaeq	r0, {r0, r1, r2, r4, r6}
- 8000028:	08000057 	stmdaeq	r0, {r0, r1, r2, r4, r6}
- 800002c:	08000057 	stmdaeq	r0, {r0, r1, r2, r4, r6}
- 8000030:	08000057 	stmdaeq	r0, {r0, r1, r2, r4, r6}
- 8000034:	08000057 	stmdaeq	r0, {r0, r1, r2, r4, r6}
- 8000038:	08000057 	stmdaeq	r0, {r0, r1, r2, r4, r6}
- 800003c:	08000057 	stmdaeq	r0, {r0, r1, r2, r4, r6}
- 8000040:	08000057 	stmdaeq	r0, {r0, r1, r2, r4, r6}
- 8000044:	08000057 	stmdaeq	r0, {r0, r1, r2, r4, r6}
- 8000048:	08000057 	stmdaeq	r0, {r0, r1, r2, r4, r6}
- 800004c:	08000057 	stmdaeq	r0, {r0, r1, r2, r4, r6}
+ 8000004:	08000009 	stmdaeq	r0, {r0, r3}
 
-08000050 <_reset_handler>:
- 8000050:	f000 f802 	bl	8000058 <main>
- 8000054:	e7ff      	b.n	8000056 <infloop>
+08000008 <_reset_handler>:
+ 8000008:	f000 f802 	bl	8000010 <main>
+ 800000c:	e7ff      	b.n	800000e <infloop>
 
-08000056 <infloop>:
- 8000056:	e7fe      	b.n	8000056 <infloop>
+0800000e <infloop>:
+ 800000e:	e7fe      	b.n	800000e <infloop>
 
-08000058 <main>:
- 8000058:	b580      	push	{r7, lr}
- 800005a:	af00      	add	r7, sp, #0
- 800005c:	4a12      	ldr	r2, [pc, #72]	; (80000a8 <main+0x50>)
- 800005e:	4b12      	ldr	r3, [pc, #72]	; (80000a8 <main+0x50>)
- 8000060:	695b      	ldr	r3, [r3, #20]
- 8000062:	f443 3300 	orr.w	r3, r3, #131072	; 0x20000
- 8000066:	6153      	str	r3, [r2, #20]
- 8000068:	f04f 4290 	mov.w	r2, #1207959552	; 0x48000000
- 800006c:	f04f 4390 	mov.w	r3, #1207959552	; 0x48000000
- 8000070:	681b      	ldr	r3, [r3, #0]
- 8000072:	f443 6380 	orr.w	r3, r3, #1024	; 0x400
- 8000076:	6013      	str	r3, [r2, #0]
- 8000078:	f04f 4290 	mov.w	r2, #1207959552	; 0x48000000
- 800007c:	f04f 4390 	mov.w	r3, #1207959552	; 0x48000000
- 8000080:	689b      	ldr	r3, [r3, #8]
- 8000082:	f443 6340 	orr.w	r3, r3, #3072	; 0xc00
- 8000086:	6093      	str	r3, [r2, #8]
- 8000088:	f04f 4390 	mov.w	r3, #1207959552	; 0x48000000
- 800008c:	2220      	movs	r2, #32
- 800008e:	619a      	str	r2, [r3, #24]
- 8000090:	f24c 3050 	movw	r0, #50000	; 0xc350
- 8000094:	f000 f80c 	bl	80000b0 <delay>
- 8000098:	f04f 4390 	mov.w	r3, #1207959552	; 0x48000000
- 800009c:	2220      	movs	r2, #32
- 800009e:	629a      	str	r2, [r3, #40]	; 0x28
- 80000a0:	4802      	ldr	r0, [pc, #8]	; (80000ac <main+0x54>)
- 80000a2:	f000 f805 	bl	80000b0 <delay>
- 80000a6:	e7ef      	b.n	8000088 <main+0x30>
- 80000a8:	40021000 	andmi	r1, r2, r0
- 80000ac:	0007a120 	andeq	sl, r7, r0, lsr #2
+08000010 <main>:
+ 8000010:	b580      	push	{r7, lr}
+ 8000012:	af00      	add	r7, sp, #0
+ 8000014:	4a12      	ldr	r2, [pc, #72]	; (8000060 <main+0x50>)
+ 8000016:	4b12      	ldr	r3, [pc, #72]	; (8000060 <main+0x50>)
+ 8000018:	695b      	ldr	r3, [r3, #20]
+ 800001a:	f443 3300 	orr.w	r3, r3, #131072	; 0x20000
+ 800001e:	6153      	str	r3, [r2, #20]
+ 8000020:	f04f 4290 	mov.w	r2, #1207959552	; 0x48000000
+ 8000024:	f04f 4390 	mov.w	r3, #1207959552	; 0x48000000
+ 8000028:	681b      	ldr	r3, [r3, #0]
+ 800002a:	f443 6380 	orr.w	r3, r3, #1024	; 0x400
+ 800002e:	6013      	str	r3, [r2, #0]
+ 8000030:	f04f 4290 	mov.w	r2, #1207959552	; 0x48000000
+ 8000034:	f04f 4390 	mov.w	r3, #1207959552	; 0x48000000
+ 8000038:	689b      	ldr	r3, [r3, #8]
+ 800003a:	f443 6340 	orr.w	r3, r3, #3072	; 0xc00
+ 800003e:	6093      	str	r3, [r2, #8]
+ 8000040:	f04f 4390 	mov.w	r3, #1207959552	; 0x48000000
+ 8000044:	2220      	movs	r2, #32
+ 8000046:	619a      	str	r2, [r3, #24]
+ 8000048:	f24c 3050 	movw	r0, #50000	; 0xc350
+ 800004c:	f000 f80c 	bl	8000068 <delay>
+ 8000050:	f04f 4390 	mov.w	r3, #1207959552	; 0x48000000
+ 8000054:	2220      	movs	r2, #32
+ 8000056:	629a      	str	r2, [r3, #40]	; 0x28
+ 8000058:	4802      	ldr	r0, [pc, #8]	; (8000064 <main+0x54>)
+ 800005a:	f000 f805 	bl	8000068 <delay>
+ 800005e:	e7ef      	b.n	8000040 <main+0x30>
+ 8000060:	40021000 	andmi	r1, r2, r0
+ 8000064:	0007a120 	andeq	sl, r7, r0, lsr #2
 
-080000b0 <delay>:
- 80000b0:	b480      	push	{r7}
- 80000b2:	b085      	sub	sp, #20
- 80000b4:	af00      	add	r7, sp, #0
- 80000b6:	6078      	str	r0, [r7, #4]
- 80000b8:	2300      	movs	r3, #0
- 80000ba:	60fb      	str	r3, [r7, #12]
- 80000bc:	e002      	b.n	80000c4 <delay+0x14>
- 80000be:	68fb      	ldr	r3, [r7, #12]
- 80000c0:	3301      	adds	r3, #1
- 80000c2:	60fb      	str	r3, [r7, #12]
- 80000c4:	68fa      	ldr	r2, [r7, #12]
- 80000c6:	687b      	ldr	r3, [r7, #4]
- 80000c8:	429a      	cmp	r2, r3
- 80000ca:	dbf8      	blt.n	80000be <delay+0xe>
- 80000cc:	bf00      	nop
- 80000ce:	3714      	adds	r7, #20
- 80000d0:	46bd      	mov	sp, r7
- 80000d2:	bc80      	pop	{r7}
- 80000d4:	4770      	bx	lr
- 80000d6:	bf00      	nop
+08000068 <delay>:
+ 8000068:	b480      	push	{r7}
+ 800006a:	b085      	sub	sp, #20
+ 800006c:	af00      	add	r7, sp, #0
+ 800006e:	6078      	str	r0, [r7, #4]
+ 8000070:	2300      	movs	r3, #0
+ 8000072:	60fb      	str	r3, [r7, #12]
+ 8000074:	e002      	b.n	800007c <delay+0x14>
+ 8000076:	68fb      	ldr	r3, [r7, #12]
+ 8000078:	3301      	adds	r3, #1
+ 800007a:	60fb      	str	r3, [r7, #12]
+ 800007c:	68fa      	ldr	r2, [r7, #12]
+ 800007e:	687b      	ldr	r3, [r7, #4]
+ 8000080:	429a      	cmp	r2, r3
+ 8000082:	dbf8      	blt.n	8000076 <delay+0xe>
+ 8000084:	bf00      	nop
+ 8000086:	3714      	adds	r7, #20
+ 8000088:	46bd      	mov	sp, r7
+ 800008a:	bc80      	pop	{r7}
+ 800008c:	4770      	bx	lr
+ 800008e:	bf00      	nop
 
 Disassembly of section .ARM.attributes:
 
@@ -100,14 +82,14 @@ Disassembly of section .ARM.attributes:
   1c:	094d070d 	stmdbeq	sp, {r0, r2, r3, r8, r9, sl}^
   20:	14041202 	strne	r1, [r4], #-514	; 0xfffffdfe
   24:	17011501 	strne	r1, [r1, -r1, lsl #10]
-  28:	1a011803 	bne	4603c <_reset_handler-0x7fba014>
+  28:	1a011803 	bne	4603c <_reset_handler-0x7fb9fcc>
   2c:	Address 0x000000000000002c is out of bounds.
 
 
 Disassembly of section .comment:
 
 00000000 <.comment>:
-   0:	3a434347 	bcc	10d0d24 <_reset_handler-0x6f2f32c>
+   0:	3a434347 	bcc	10d0d24 <_reset_handler-0x6f2f2e4>
    4:	65462820 	strbvs	r2, [r6, #-2080]	; 0xfffff7e0
    8:	61726f64 	cmnvs	r2, r4, ror #30
    c:	322e3520 	eorcc	r3, lr, #32, 10	; 0x8000000
