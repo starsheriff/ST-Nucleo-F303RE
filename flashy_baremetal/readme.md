@@ -2,7 +2,7 @@
 Same as `flashy`, only with custom baremetal startup and linker scripts.
 `flashy_baremetal` does not require to call `SystemInit` either.
 
-For documentation of `main.c` see the [https://github.com/starsheriff/ST-Nucleo-F303RE/tree/master/flashy](documentation of `flashy`)
+For documentation of `main.c` see the [documentation of `flashy`](https://github.com/starsheriff/ST-Nucleo-F303RE/tree/master/flashy)
 
 
 
