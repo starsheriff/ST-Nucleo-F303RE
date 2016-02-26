@@ -1,25 +1,12 @@
 # Flashy Baremetal
-Same as `flashy`, only with custom baremetal startup and linker scripts.
-`flashy_baremetal` does not require to call `SystemInit` either.
+Same as `flashy`, only with custom baremetal startup and linker scripts. There is no call to `SystemInit` required either.
 
 For documentation of `main.c` see the [documentation of `flashy`](https://github.com/starsheriff/ST-Nucleo-F303RE/tree/master/flashy)
 
 
+# Makefile
+Most of the time I actually spent on the makefile.
 
-
-
-
-Definitions from Nucleo Board with STM32F303xE:
-* GPIO Port: A
-* GPIO Pin: 5
-That's where the LED is connected to on the Nucleo board.
-
-Going deeper:
-GPIO_PIN_5 is available at `stm32f3xx_hal_gpio.h`
-
-`#define GPIO_PIN_5                 ((uint16_t)0x0020)  /* Pin 5 selected    */`
-
-So when entering main(), we have some more things to do.
-1. Enable the clock on the LED Pin.
-2. Configure the Pin (as output, push/pull)
-3. Start infinite loop turning LED on and off.
+# References
+1. [topic on electronics.stackexchange.com](http://electronics.stackexchange.com/questions/30736/stm32f2-makefile-linker-script-and-start-up-file-combination-without-commercia)
+2. [dwelch67 on github](https://github.com/dwelch67/stm32f4d). Lot's of good projects. He made the accepted answer on the above stackexchange topic.
