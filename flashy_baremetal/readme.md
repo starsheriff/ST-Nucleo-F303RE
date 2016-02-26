@@ -9,11 +9,14 @@ Most of the time I actually spent on the makefile. Getting the project to compil
 
 ## Object Dump
 
-  Disassembly of section .text:
-  
-  08000000 <_reset_handler-0x8>:
-   8000000:	2000ffff 	strdcs	pc, [r0], -pc	; <UNPREDICTABLE>
-   8000004:	08000009 	stmdaeq	r0, {r0, r3}
+```
+Disassembly of section .text:
+
+08000000 <_reset_handler-0x8>:
+ 8000000:	2000ffff 	strdcs	pc, [r0], -pc	; <UNPREDICTABLE>
+ 8000004:	08000009 	stmdaeq	r0, {r0, r3}
+ ...
+```
 
 # References
 1. [topic on electronics.stackexchange.com](http://electronics.stackexchange.com/questions/30736/stm32f2-makefile-linker-script-and-start-up-file-combination-without-commercia)
