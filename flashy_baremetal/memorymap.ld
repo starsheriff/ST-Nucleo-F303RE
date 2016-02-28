@@ -1,5 +1,5 @@
-/* Entry Point */
-/*ENTRY(Reset_Handler)*/
+/* Define Entry Point */
+ENTRY(_reset_handler) 
 
 /* Specify the memory areas */
 MEMORY
