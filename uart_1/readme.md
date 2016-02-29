@@ -1,5 +1,6 @@
 
 ```
+$dmesg
 ...
 [18085.407899] usb 2-1.1: new full-speed USB device number 5 using ehci-pci
 [18085.496375] usb 2-1.1: New USB device found, idVendor=0483, idProduct=374b
