@@ -1,5 +1,12 @@
 
 ```
+$ uname -a
+Linux hyperion 4.3.5-300.fc23.x86_64 #1 SMP Mon Feb 1 03:18:41 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux
+```
+
+STM Nucleo connected to my system:
+
+```
 $dmesg
 ...
 [18085.407899] usb 2-1.1: new full-speed USB device number 5 using ehci-pci
