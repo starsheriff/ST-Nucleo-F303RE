@@ -1,4 +1,11 @@
 
+## Pin Configuration STMF303RE
+
+
+
+## System Configuration (Linux)
+I am running a Fedora system:
+
 ```
 $ uname -a
 Linux hyperion 4.3.5-300.fc23.x86_64 #1 SMP Mon Feb 1 03:18:41 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux
@@ -30,5 +37,7 @@ $dmesg
 ...
 ```
 
+#References
 
-[http://www.carminenoviello.com/2015/03/02/how-to-use-stm32-nucleo-serial-port/](http://www.carminenoviello.com/2015/03/02/how-to-use-stm32-nucleo-serial-port/)
+1. Nucleo User Manual (DM00105823) 
+2. [http://www.carminenoviello.com/2015/03/02/how-to-use-stm32-nucleo-serial-port/](http://www.carminenoviello.com/2015/03/02/how-to-use-stm32-nucleo-serial-port/)
