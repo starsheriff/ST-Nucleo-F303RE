@@ -29,3 +29,6 @@ $dmesg
 [18086.574867] sd 7:0:0:0: [sdb] Attached SCSI removable disk
 ...
 ```
+
+
+[http://www.carminenoviello.com/2015/03/02/how-to-use-stm32-nucleo-serial-port/](http://www.carminenoviello.com/2015/03/02/how-to-use-stm32-nucleo-serial-port/)
