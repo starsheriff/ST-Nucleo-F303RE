@@ -38,8 +38,8 @@
   */
 
 /* Includes ------------------------------------------------------------------*/
-#include "Inc/main.h"
-#include "Inc/stm32f3xx_it.h"
+#include "inc/main.h"
+#include "inc/stm32f3xx_it.h"
 
 /** @addtogroup STM32F3xx_HAL_Examples
   * @{
