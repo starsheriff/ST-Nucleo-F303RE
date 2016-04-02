@@ -35,6 +35,7 @@ stm32f3xx_hal_gpio.o:
 
 stm32f3xx_hal_cortex.o:
 	$(CC) $(CFLAGS) -mcpu=cortex-m4 -I./Inc/ -DSTM32F303xE -Os -c stm32f3xx_hal_cortex.c -o stm32f3xx_hal_cortex.o
+	
 
 clean:
 	rm *.o *.elf *.hex

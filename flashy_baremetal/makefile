@@ -21,10 +21,13 @@ main.elf:
 	arm-none-eabi-ld -T memorymap.ld  $(OBJECTS) -o main.elf
 		
 main.hex:
-	arm-none-eabi-objcopy -O binary main.elf main.hex
+	arm-none-eabi-objcopy -Oihex main.elf main.hex
 	
 flash:
 	openocd -f openocd.cfg
 
 clean:
 	rm *.o *.elf *.hex
+	
+dump:
+	arm-none-eabi-objdump -D main.elf > main.txt
