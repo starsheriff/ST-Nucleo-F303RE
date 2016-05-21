@@ -29,6 +29,9 @@ Let's see how to connect to the timers physically on the Nucleo board. Table 13 
 |TIM20, Ch. 1| PE2 | - |
 |TIM20, Ch. 2| PE3 | - |
 
+## Configure Timer (in Encoder Interface Mode)
+I want the counter to work in 4x mode. That is, I want the counter to count on all 4 edges, rising and falling of both input channels. That gives the highest resolution, see this [tutorial (4.)](#refs) for some more information about quadrature encoders.
+
 
 
 <a id="refs"></a>
@@ -38,3 +41,4 @@ Let's see how to connect to the timers physically on the Nucleo board. Table 13 
 1. [DM00043574 (STMF303 Reference Manual)](http://www.st.com/web/en/catalog/mmc/FM141/SC1169/SS1576/LN1531)
 2. [DM00118585 STM32F303RE Datasheet](http://www.st.com/web/en/catalog/mmc/FM141/SC1169/SS1576/LN1531)
 3. [DM00105823 STM32 Nucleo-64 boards User Manual](http://www.st.com/web/catalog/tools/FM116/CL1620/SC959/SS1532/LN1847/PF260945)
+4. [Quadrature Encoder Tutorial](http://tutorial.cytron.com.my/2012/01/17/quadrature-encoder)
