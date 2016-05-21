@@ -32,6 +32,13 @@ Let's see how to connect to the timers physically on the Nucleo board. Table 13 
 ## Configure Timer (in Encoder Interface Mode)
 I want the counter to work in 4x mode. That is, I want the counter to count on all 4 edges, rising and falling of both input channels. That gives the highest resolution, see this [tutorial (4.)](#refs) for some more information about quadrature encoders.
 
+### Initialization
+
+* set SMS='011 in register TIM3_SMCR (enables counting on all four edges)
+* set polarity of input channels TI1 and TI2 with CC1P and CC2P bits in register TIM3CCER
+* CN1P, CN2P must be cleared
+* 
+
 
 
 <a id="refs"></a>
